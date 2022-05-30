@@ -1,22 +1,21 @@
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
-import "hardhat/console.sol";
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract MetaCryptoNFT is ERC721, ERC721Enumerable, ERC721URIStorage {
+contract LimaNFT is ERC721, ERC721Enumerable, ERC721URIStorage {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
     uint256 MAX_SUPPLY = 1000;
     uint256 MAX_MINTING = 6;
-    mapping (address => uint256) addressToNumberOfNft;
+    mapping (address => uint256) addressToNumberOfNft; //to keep track of the quantity of nft has the wallet.
 
-    constructor() ERC721("MetaCrypt0NFT", "MC0") {}
+    constructor() ERC721("LimaNFT", "LIMA") {}
 
     function safeMint(address to, string memory uri) public {
         uint256 tokenId = _tokenIdCounter.current();
