@@ -1,6 +1,7 @@
 const hre = require("hardhat");
 
 //LimaNFT contract address 0xf5DEb12Bb5943859765C99332b2336126EB14194
+//LimaNFT Mumbai Polygon contract address 0xF470725F69b13678A9E43EdbF54818A6A195FA5C
 
 async function main() {
 
